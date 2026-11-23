@@ -18,3 +18,4 @@ sécurité. Vous pouvez utiliser le TestClient de FastAPI :
 def test_exemple_qui_passe():
     """Test trivial fourni pour vérifier que pytest est bien configuré."""
     assert 1 + 1 == 2
+ 
