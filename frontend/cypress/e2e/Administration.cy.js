@@ -39,7 +39,6 @@ describe('Suppression de Joueur', () => {
     //Appuyer sur le bouton supprimer
     cy.contains('button','Supprimer').click()
     cy.contains('Suppression impossible : le joueur appartient à une équipe').should('be.visible')
-    cy.wrap({ amount: 10 }).should('have.property', 'amount').and('eq', 10)
   })
   
 
