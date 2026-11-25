@@ -16,33 +16,22 @@
 
 describe('Connexion toutes les pages', () => {
   it("Charge planning", () => {
-    cy.login('admin@padel.com','Admin@2025!')
-    cy.visit('/planning')
-    cy.contains('Mois suivant').should('be.visible')    
+    cy.pagePlanning('admin@padel.com','Admin@2025!')
   })
 
   it("Charge matchs", () => {
-    cy.login('admin@padel.com','Admin@2025!')
-    cy.visit('/matches')
-    cy.contains('Matchs').should('be.visible')    
+    cy.pageMatchs('admin@padel.com','Admin@2025!')
   })
 
   it("Charge résultats", () => {
-    cy.login('admin@padel.com','Admin@2025!')
-    cy.visit('/results')
-    cy.contains('Résultats').should('be.visible')    
+    cy.pageResultats('admin@padel.com','Admin@2025!')
   })
 
   it("Charge Profil", () => {
-    cy.login('admin@padel.com','Admin@2025!')
-    cy.visit('/profile')
-    cy.contains('Mon profil').should('be.visible')    
+    cy.pageProfil('admin@padel.com','Admin@2025!')
   })
 
   it("Charge admin", () => {
-    cy.login('admin@padel.com','Admin@2025!')
-    cy.visit('/admin')
-    cy.contains('Administration').should('be.visible')    
+    cy.pageAdmin('admin@padel.com','Admin@2025!') 
   })
-
 })
