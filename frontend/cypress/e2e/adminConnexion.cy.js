@@ -14,18 +14,35 @@
 
 
 
-describe('adminConnexion', () => {
-  it("charge la page d'accueil", () => {
-    cy.visit('/')
-    cy.contains('Corpo Padel').should('be.visible')
-  })
-
-  it("charge page de login", () => {
+describe('Connexion toutes les pages', () => {
+  it("Charge planning", () => {
     cy.login('admin@padel.com','Admin@2025!')
+    cy.visit('/planning')
+    cy.contains('Mois suivant').should('be.visible')    
   })
 
-  /*it("charge Accueil", () => {
-    cy.contains('Déconnexion').should('be.visible')    
-  })*/
+  it("Charge matchs", () => {
+    cy.login('admin@padel.com','Admin@2025!')
+    cy.visit('/matches')
+    cy.contains('Matchs').should('be.visible')    
+  })
+
+  it("Charge résultats", () => {
+    cy.login('admin@padel.com','Admin@2025!')
+    cy.visit('/results')
+    cy.contains('Résultats').should('be.visible')    
+  })
+
+  it("Charge Profil", () => {
+    cy.login('admin@padel.com','Admin@2025!')
+    cy.visit('/profile')
+    cy.contains('Mon profil').should('be.visible')    
+  })
+
+  it("Charge admin", () => {
+    cy.login('admin@padel.com','Admin@2025!')
+    cy.visit('/admin')
+    cy.contains('Administration').should('be.visible')    
+  })
 
 })
