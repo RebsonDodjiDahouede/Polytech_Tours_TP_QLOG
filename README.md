@@ -259,7 +259,7 @@ Remplacez `VOTRE-COMPTE` par le compte qui héberge le fork, et `ci.yml` par le
 nom de votre fichier de workflow :
 
 ```markdown
-![CI](https://github.com/VOTRE-COMPTE/Polytech_Tours_TP_QLOG/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/RebsonDodjiDahouede/Polytech_Tours_TP_QLOG/actions/workflows/ci.yml/badge.svg)
 ```
 
 > ⚠️ Le badge doit pointer vers **votre fork**, pas vers le dépôt d'origine —
